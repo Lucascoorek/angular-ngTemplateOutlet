@@ -1,0 +1,12 @@
+<div>
+  <div>Some content before slot</div>
+  <ng-content select="[child-content]"></ng-content>
+  <div>Some content after slot</div>
+  <ng-template #childTemplate>
+    <div>This is child template</div>
+  </ng-template>
+</div>
+<button (click)="showParent = !showParent">Show Parent Template</button>
+<ng-container
+  *ngTemplateOutlet="showParent ? parentTemplate : childTemplate"
+></ng-container>

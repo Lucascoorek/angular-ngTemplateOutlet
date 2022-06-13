@@ -1,0 +1,8 @@
+<ng-template #myTemplate>
+  <div>Parent ng-template</div>
+  <div *ngIf="loading">It is loading</div>
+</ng-template>
+<app-child [parentTemplate]="myTemplate">
+  <div child-content>child content</div>
+</app-child>
+
